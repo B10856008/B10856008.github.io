@@ -42,6 +42,26 @@
             border: red dotted;
         }
         
+        .purple {
+            color: purple;
+            font-family: Arial;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            border-width: 1px;
+            border: red dotted;
+        }
+        
+        .red {
+            color: red;
+            font-family: Arial;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            border-width: 1px;
+            border: red dotted;
+        }
+        
         #tableTitle {
             font-weight: bolder;
             font-size: 18px;
@@ -66,9 +86,9 @@
             <tr>
                 <th></th>
                 <th style="border: red dotted">套餐1<br>50元</th>
-                <th style="border: red dotted">套餐2<br>100元<br>特價:50</th>
+                <th style="border: red dotted">套餐2<br>100元<br><span style="color:red">特價:50</span></th>
                 <th style="border: red dotted">套餐3<br>150元</th>
-                <th style="border: red dotted">套餐4<br>200元<br>特價:150</th>
+                <th style="border: red dotted">套餐4<br>200元<br><span style="color:red">特價:150</span></th>
                 <th style="border: red dotted">套餐5<br>250元</th>
             </tr>
         </thead>
@@ -87,18 +107,24 @@
                 for (i = 1; i < 8; i++) {
                     document.write("<tr>");
                     for (j = 0; j < 6; j++) {
-                        document.write("<td class = \"content\">")
+
                         if (j == 0) {
+                            document.write("<td class = \"purple\">")
                             document.write(i);
                         } else if (j == 1) {
+                            document.write("<td class = \"content\">")
                             document.write(a * i);
                         } else if (j == 2) {
+                            document.write("<td class = \"red\">")
                             document.write("原價:" + b * i + "<br>折扣後:" + b1 * i);
                         } else if (j == 3) {
+                            document.write("<td class = \"content\">")
                             document.write(c * i);
                         } else if (j == 4) {
+                            document.write("<td class = \"red\">")
                             document.write("原價:" + d * i + "<br>折扣後:" + d1 * i);
                         } else if (j == 5) {
+                            document.write("<td class = \"content\">")
                             document.write(e * i);
                         }
 
